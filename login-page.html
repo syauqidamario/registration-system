@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <form method="POST" class="login-form" id="login-form">
+                <h2>Login</h2>
+                <div class="form-group-1">
+                    <input type="email" name="email" id="email" placeholder="Email" required />
+                    <div class="select-list">
+                        <select name="user_type" id="user_type">
+                            <option slected value="">User Type</option>
+                            <option value="participant">Participant</option>
+                            <option value="staff">Staff</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Log In" />
+                </div>
+                <div class="form-submit">
+                    <a href="index.html" class="btn-register">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--Konfigurasi Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <!--<script src="js/firebase-configuration.js"></script> -->
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main02.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
