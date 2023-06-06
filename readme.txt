@@ -1,2 +1,3 @@
-This template was made by Colorlib (https://colorlib.com)
-Please visit our website for more awesome templates, themes and tools. 
+-Data is stored in a Firebase Firestore database.
+-There are two types of users - Participant and Staff. Each type of user will have different page displayed.
+-Still going to be improved over time.
