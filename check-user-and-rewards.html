@@ -4,61 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Reward List</title>
 
     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="css/style02.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="register-participant.html">JTI Registration System</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="check-user-and-rewards.html">Check User Rewards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="redeem-rewards.html">Redeem Rewards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login-page.html">Log Out</a>
-                    </li>
-                </ul>
+    
+    <nav class="bg-blue-500">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-between items-center h-16"> 
+          <div class="flex-shrink-100">
+            <a href="#" class="text-black text-lg font-semibold mx-auto">JTI Registration System</a>
+          </div>
+      
+          <div class="flex justify-end"> <!-- Modified line -->
+            <div class="flex space-x-4">
+              <a href="check-user-and-rewards.html" class="text-gray-100 hover:bg-blue-400 hover:text-black px-3 py-2 rounded-md text-sm font-medium">Reward List</a>
+              <a href="redeem-rewards.html" class="text-gray-100 hover:bg-blue-400 hover:text-black px-3 py-2 rounded-md text-sm font-medium">Redeem Rewards</a>
+              <a href="login-page.html" class="text-gray-100 hover:bg-blue-400 hover:text-black px-3 py-2 rounded-md text-sm font-medium">Log Out</a>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <div class="container">
-        <h2>Reward List</h2>
-        <table class="table table-striped">
-            <thead>
+      </nav>
+      
+      <div class="container mx-auto">
+        <h2 class="text-2xl font-bold mt-5">Reward List</h2>
+        <table class="table-auto w-full mt-5">
+            <thead class="bg-blue-500">
                 <tr>
-                    <th>Names</th>
-                    <th>Rewards</th>
+                    <th class="px-4 py-2 text-white h-12 w-1/3 border border-black">Names</th>
+                    <th class="px-4 py-2 text-white h-12 w-1/3 border border-black">Rewards</th>
+                    <th class="px-4 py-2 text-white h-12 w-1/3 border border-black">Claim Status</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="border border-black px-5 py-3 bg-white"></td>
+                    <td class="border border-black py-3 bg-white"></td>
+                    <td class="border border-black px-5 py-3 bg-white"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="border border-black px-5 py-3 bg-blue-200"></td>
+                    <td class="border border-black px-5 py-3 bg-blue-200"></td>
+                    <td class="border border-black px-5 py-3 bg-blue-200"></td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
+                    <td class="border border-black px-5 py-3 bg-white"></td>
+                    <td class="border border-black px-5 py-3 bg-white"></td>
+                    <td class="border border-black px-5 py-3 bg-white"></td>
                 </tr>
             </tbody>
         </table>
     </div>
+    
+    
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap JS -->

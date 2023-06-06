@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Register</title>
 
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Font Icon -->
+  <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="registration-page">
 
-    <div class="main">
-        <div class="container">
-            <form method="POST" class="registration-form" id="registration-form">
-                <h2>User Registration</h2>
-                <div class="form-group-1">
-                    <input type="text" name="name" id="name" placeholder="Your Name" required />
-                    <input type="email" name="email" id="email" placeholder="Email" required />
-                    <div class="select-list">
-                        <select name="user_type" id="user_type">
-                            <option selected value="">User Type</option>
-                            <option value="participant">Participant</option>
-                            <option value="staff">Staff</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-submit">
-                    <input type="submit" name="submit" id="submit" class="submit" value="Register" />
-                </div>
-                <div class="form-submit">
-                    <a href="login-page.html" class="btn-register">Already have an account? Login!</a>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <!--Konfigurasi Firebase-->
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-    <!--<script src="js/firebase-configuration.js"></script>-->
-    <!-- JS -->
-    <script>
-    $(document).ready(function() {
-        // Handle form submission
-        $("#registration-form").submit(function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-            // Get the selected user type
-            var userType = $("#user_type").val();
+  <div class="w-full max-w-xs">
+    <form method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h2 class="text-2xl text-center font-bold mb-8">User Registration</h2>
+      <div class="mb-4">
+        <input type="text" name="name" id="name" placeholder="Your Name" required
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-base">
+      </div>
+      <div class="mb-4">
+        <input type="email" name="email" id="email" placeholder="Email" required
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-base">
+      </div>
+      <div class="mb-4">
+        <select name="user_type" id="user_type"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-base">
+          <option selected value="">User Type</option>
+          <option value="participant">Participant</option>
+          <option value="staff">Staff</option>
+        </select>
+      </div>
+      <div class="mb-3 flex justify-center">
+        <input type="submit" name="submit" id="submit" value="Register"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-2">
+      </div>
+      <div class="text-center">
+        <a href="login-page.html"
+          class="text-sm text-gray-600 hover:text-gray-800 font-bold mt-2">Already have an account? Login!</a>
+      </div>
+    </form>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Firebase JavaScript SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
 
-            // Redirect based on user type
-            if (userType === "participant") {
-                window.location.href = "check-user-and-rewards.html"; // Redirect to check-user-and-rewards.html
-            } else if (userType === "staff") {
-                window.location.href = "register-participant.html"; // Redirect to register-participant.html
-            }
-        });
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Handle form submission
+      $("#registration-form").submit(function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get the selected user type
+        var userType = $("#user_type").val();
+
+        // Redirect based on user type
+        if (userType === "participant") {
+          window.location.href = "check-user-and-rewards.html"; // Redirect to check-user-and-rewards.html
+        } else if (userType === "staff") {
+          window.location.href = "register-participant.html"; // Redirect to register-participant.html
+        }
+      });
     });
-    </script>
+  </script>
 </body>
+
 </html>

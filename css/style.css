@@ -1,4 +1,5 @@
 /* @extend display-flex; */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
 display-flex {
   display: flex;
   display: -webkit-flex; }
@@ -106,7 +107,7 @@ h2 {
   padding: 0;
   font-weight: bold;
   color: #222;
-  font-family: 'Roboto';
+  font-family:'Nunito Sans', sans-serif;
   font-size: 22px;
   margin-bottom: 30px;
   text-transform: uppercase; }
@@ -133,7 +134,7 @@ body {
   -ms-background-size: cover;
   background-position: center center;
   font-weight: 400;
-  font-family: 'Roboto';
+  font-family:'Nunito Sans', sans-serif;
   font-size: 22px;
   margin: 0px; }
 
@@ -142,7 +143,7 @@ body {
   position: relative; }
 
 .container {
-  font-family: 'Roboto', sans-serif;
+  font-family:'Nunito Sans', sans-serif, sans-serif;
   font-size: 22px;
   width: 543px;
   background: #00a3e0;
@@ -165,7 +166,7 @@ input, select {
   padding: 3px 0;
   color: #222;
   margin-bottom: 31px;
-  font-family: 'Roboto', sans-serif;
+  font-family:'Nunito Sans', sans-serif, sans-serif;
   font-size: 22px; }
   input:focus, select:focus {
     color: #222;

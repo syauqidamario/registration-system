@@ -9,38 +9,34 @@ var firebaseConfig = {
       measurementId: "G-Z9G1WHDDRL"
 };
 
-  // Inisialisasi Firebase
-  firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-  // Access the form element
-  var login_form = document.getElementById('login-form');
-  
-  // Get a reference to the Firebase Firestore database
-  var database = firebase.firestore();
-  
-  // Form submission
-  var form = document.getElementById("registration-form");
-  
-  form.addEventListener("submit", function(e) {
-      e.preventDefault(); // Prevent form submission
-  
-      // Get values from the form
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var userType = document.getElementById("user_type").value;
-  
-      // Store new registration data in the database
-      database.collection("registrations").add({
-          name: name,
-          email: email,
-          userType: userType
-      })
-      .then(function() {
-          alert("Registration successful!");
-          form.reset(); // Reset the form
-      })
-      .catch(function(error) {
-          console.error("Error adding registration: ", error);
-      });
-  });
-  
+// Get a reference to the Firebase Firestore database
+var database = firebase.firestore();
+
+// Access the form element
+var form = document.getElementById("registration-form");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent form submission
+
+  // Get values from the form
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var userType = document.getElementById("user_type").value;
+
+  // Store new registration data in the database
+  database.collection("registrations").add({
+    name: name,
+    email: email,
+    userType: userType
+  })
+    .then(function() {
+      alert("Registration successful!");
+      form.reset(); // Reset the form
+    })
+    .catch(function(error) {
+      console.error("Error adding registration: ", error);
+    });
+});
