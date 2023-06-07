@@ -15,7 +15,7 @@
     }
   ],
   "hosting": {
-    "public": "public",
+    "public": "/c/xampp/htdocs/JTI-registration-system",
     "ignore": [
       "firebase.json",
       "**/.*",
